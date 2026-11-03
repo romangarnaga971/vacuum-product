@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VORTA: бездротовий пилосос</title>
+  <meta name="description" content="Бездротовий пилосос VORTA: 185 AW, 70 хвилин роботи, 2,4 кг.">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="importmap">
+    { "imports": { "three": "./vendor/three/three.module.js" } }
+  </script>
+</head>
+<body>
+  <canvas class="stage" aria-hidden="true"></canvas>
+
+  <header class="nav">
+    <a class="nav__logo" href="#top">VORTA</a>
+    <nav class="nav__links">
+      <a href="#story" data-i18n="nav.story"></a>
+      <a href="#uses" data-i18n="nav.uses"></a>
+      <a href="#specs" data-i18n="nav.specs"></a>
+      <a href="#price" data-i18n="nav.price"></a>
+    </nav>
+    <div class="nav__lang" role="group" aria-label="Language">
+      <button type="button" data-lang="uk">UA</button>
+      <button type="button" data-lang="en">EN</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <h1 class="hero__word" aria-label="VORTA">
+        <span>V</span><span>O</span><span>R</span><span>T</span><span>A</span>
+      </h1>
+      <div class="hero__ui">
+        <p class="hero__tagline" data-i18n="hero.tagline"></p>
+        <div class="hero__side">
+          <p data-i18n="hero.text"></p>
+          <a class="btn" href="#price" data-i18n="hero.cta"></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="story" id="story">
+      <div class="story__pin">
+        <article class="panel">
+          <h2 data-i18n="story.a.title"></h2>
+          <p data-i18n="story.a.text"></p>
+        </article>
+        <article class="panel">
+          <h2 data-i18n="story.b.title"></h2>
+          <p data-i18n="story.b.text"></p>
+        </article>
+        <article class="panel">
+          <h2 data-i18n="story.c.title"></h2>
+          <p data-i18n="story.c.text"></p>
+        </article>
+        <article class="panel">
+          <h2 data-i18n="story.d.title"></h2>
+          <p data-i18n="story.d.text"></p>
+        </article>
+        <div class="labels" aria-hidden="true">
+          <span class="label" data-part="filter" data-i18n="label.filter"></span>
+          <span class="label" data-part="motor" data-i18n="label.motor"></span>
+          <span class="label" data-part="bin" data-i18n="label.bin"></span>
+          <span class="label label--under" data-part="battery" data-i18n="label.battery"></span>
+          <span class="label" data-part="head" data-i18n="label.head"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="uses" id="uses">
+      <div class="uses__track">
+        <h2 class="uses__title" data-i18n="uses.title"></h2>
+        <figure class="use">
+          <div class="slot"><img src="assets/img/V-02.webp" data-i18n-alt="uses.a.alt"></div>
+          <figcaption><strong data-i18n="uses.a.title"></strong><span data-i18n="uses.a.text"></span></figcaption>
+        </figure>
+        <figure class="use">
+          <div class="slot"><img src="assets/img/V-03.webp" data-i18n-alt="uses.b.alt"></div>
+          <figcaption><strong data-i18n="uses.b.title"></strong><span data-i18n="uses.b.text"></span></figcaption>
+        </figure>
+        <figure class="use">
+          <div class="slot"><img src="assets/img/V-04.webp" data-i18n-alt="uses.c.alt"></div>
+          <figcaption><strong data-i18n="uses.c.title"></strong><span data-i18n="uses.c.text"></span></figcaption>
+        </figure>
+        <figure class="use">
+          <div class="slot"><img src="assets/img/V-05.webp" data-i18n-alt="uses.d.alt"></div>
+          <figcaption><strong data-i18n="uses.d.title"></strong><span data-i18n="uses.d.text"></span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="home">
+      <img src="assets/img/V-06.webp" data-i18n-alt="home.alt" loading="lazy">
+      <p data-i18n="home.text"></p>
+    </section>
+
+    <section class="specs" id="specs">
+      <h2 data-i18n="specs.title"></h2>
+      <dl class="specs__list">
+        <div><dt data-i18n="specs.power"></dt><dd><b data-count="185">185</b> AW</dd></div>
+        <div><dt data-i18n="specs.time"></dt><dd><b data-count="70">70</b> <span data-i18n="specs.time.unit"></span></dd></div>
+        <div><dt data-i18n="specs.weight"></dt><dd><b data-i18n="specs.weight.value"></b> <span data-i18n="specs.weight.unit"></span></dd></div>
+        <div><dt data-i18n="specs.bin"></dt><dd><b data-i18n="specs.bin.value"></b> <span data-i18n="specs.bin.unit"></span></dd></div>
+        <div><dt data-i18n="specs.noise"></dt><dd><b data-count="72">72</b> <span data-i18n="specs.noise.unit"></span></dd></div>
+        <div><dt data-i18n="specs.filter"></dt><dd><b data-i18n="specs.filter.value"></b> %</dd></div>
+      </dl>
+    </section>
+
+    <section class="price" id="price">
+      <div class="price__photo slot"><img src="assets/img/V-07.webp" data-i18n-alt="price.alt" loading="lazy"></div>
+      <div class="price__info">
+        <h2 data-i18n="price.title"></h2>
+        <ul>
+          <li data-i18n="price.item1"></li>
+          <li data-i18n="price.item2"></li>
+          <li data-i18n="price.item3"></li>
+          <li data-i18n="price.item4"></li>
+        </ul>
+        <p class="price__sum">
+          <span class="price__now" data-i18n="price.now"></span>
+          <s data-i18n="price.old"></s>
+        </p>
+        <a class="btn btn--blue" href="#price" data-i18n="price.cta"></a>
+        <p class="price__note" data-i18n="price.note"></p>
+      </div>
+    </section>
+
+    <section class="faq">
+      <h2 data-i18n="faq.title"></h2>
+      <div class="faq__list">
+        <details><summary data-i18n="faq.q1"></summary><p data-i18n="faq.a1"></p></details>
+        <details><summary data-i18n="faq.q2"></summary><p data-i18n="faq.a2"></p></details>
+        <details><summary data-i18n="faq.q3"></summary><p data-i18n="faq.a3"></p></details>
+        <details><summary data-i18n="faq.q4"></summary><p data-i18n="faq.a4"></p></details>
+      </div>
+    </section>
+
+    <section class="final">
+      <h2 class="final__word" data-i18n="final.title"></h2>
+      <a class="btn" href="#price" data-i18n="final.cta"></a>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span data-i18n="foot.demo"></span>
+    <span>2026</span>
+  </footer>
+
+  <script src="vendor/gsap.min.js"></script>
+  <script src="vendor/ScrollTrigger.min.js"></script>
+  <script src="vendor/lenis.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
